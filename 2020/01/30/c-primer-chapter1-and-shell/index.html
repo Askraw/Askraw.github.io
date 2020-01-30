@@ -15,7 +15,7 @@
 <meta property="og:description" content="目前在重读C++Primer，因为是新版大缘故也新加了一些C++11的特性，在看书之外会把需要实践的问题和课后习题标注，统一编程实践。 Shell Script首先shell脚本在ubuntu系统是没有后缀名的。通过直接创建文件编写然后修改其权限，之后即可运行复用。 1chmod +x script_name  接下来是关于shell脚本的一些语法习惯的问题，常用的编译和插件跟定制化的功能相比还是">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-30T06:18:25.000Z">
-<meta property="article:modified_time" content="2020-01-30T06:48:38.896Z">
+<meta property="article:modified_time" content="2020-01-30T06:55:29.236Z">
 <meta property="article:author" content="阿浪">
 <meta property="article:tag" content="c++primer">
 <meta name="twitter:card" content="summary">
@@ -99,7 +99,7 @@
 <p>本脚本目前还非常简陋未来可以不断的完善和充实丰富。它现在的作用就是以一个给定的命名方式，通过读入章节和问题的数字来编译和运行cpp程序。</p>
 <h2 id="C-Primer-Chapter-1"><a href="#C-Primer-Chapter-1" class="headerlink" title="C++ Primer Chapter 1"></a>C++ Primer Chapter 1</h2><p>对于cppprimer的第一章的内容，我觉得似乎对于已经了解过C++的人来说有点奇技淫巧了。虽然以目前我的水平说这个话并不算合适，但是我希望我能在未来的工作中以好的习惯来减少出现这种刁钻问题的可能，精力能更集中到更重要的层面的问题和方式上来。换句话说，第一章里出现的问题，对于规范的编程者来说是写不出这样的代码的，这样的话如果花时间去琢磨这些问题对于25岁的我，一个即将工作的人来说并不合适。</p>
 <p>最后，写一个读取一行不定长度的包括int型和string型的输入的一个读取方式</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> line;</span><br><span class="line">getline(<span class="built_in">cin</span>, line);</span><br><span class="line"><span class="function"><span class="built_in">stringstream</span> <span class="title">ss</span><span class="params">(line)</span></span>;</span><br><span class="line"><span class="built_in">string</span> word;</span><br><span class="line"><span class="keyword">while</span>(ss&gt;&gt;word)</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; word &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> line;</span><br><span class="line">getline(<span class="built_in">std</span>::<span class="built_in">cin</span>, line);</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">stringstream</span> <span class="title">ss</span><span class="params">(line)</span></span>;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> word;</span><br><span class="line"><span class="keyword">while</span>(ss&gt;&gt;word)</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; word &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
 
       
     </div>
