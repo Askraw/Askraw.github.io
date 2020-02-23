@@ -97,9 +97,11 @@
 <h2 id="linux-remove"><a href="#linux-remove" class="headerlink" title="linux remove"></a>linux remove</h2><p>与创建文件或者文件夹对应的就是remove操作。对于单个文件可以直接rm操作，对于空的文件夹也可以rmdir对空（！！！）的文件夹进行删除。</p>
 <p>而经常提及又不能乱用的</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf xxx</span><br></pre></td></tr></table></figure>
-<p>其实是包含了2个参数f和r；<br>-f代表force 忽略不存在的文件，不给出提示；<br>-r代表recursive，将参数的目录和子目录进行递归式的删除；<br>-i代表interactive交互式删除；<br>所以 rm -rf xxx的含义就是xxx的子目录和子目录下的所有file全部删掉。</p>
+<p>其实是包含了2个参数f和r；<br>-f代表force 忽略不存在的文件，不给出提示；<br>-r代表recursive，将参数的目录和子目录进行递归式的删除；<br>-i代表interactive交互式删除；</p>
+<p>所以 rm -rf xxx的含义就是xxx的子目录和子目录下的所有file全部删掉。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rm -i *.log</span><br><span class="line">rm -rf folder</span><br><span class="line">rm -ri folder</span><br></pre></td></tr></table></figure>
 
+<p>第一行表示对当前目录下的log文件进行交互式的删除；<br>第二行简单地说就是强制递归的删除一个文件夹大所有内容；<br>第三个类似第二个，不过f参数变成了i，它会不断的提示删除每个条目。</p>
 <h2 id="linux-chmod"><a href="#linux-chmod" class="headerlink" title="linux chmod"></a>linux chmod</h2><p>同样和文件相关联的还有使用权限和修改权限的操作</p>
 <h2 id="linux-copy"><a href="#linux-copy" class="headerlink" title="linux copy"></a>linux copy</h2><p>copy指令有复制文件这个只需要指定复制的文件的路径到目标路径即可。举个例子，将当前路径的cpp文件复制给上一级路径</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp .&#x2F;main.cpp ..&#x2F;</span><br></pre></td></tr></table></figure>
